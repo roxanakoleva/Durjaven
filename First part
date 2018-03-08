@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1,n2,n3;
+    float cena;
+    cout << "Price of first place:";
+    cin >> n1;
+    cout << "Price of second place:";
+    cin >> n2;
+    if(n1<n2)
+    {
+        cout << "Enter correct price of second place:";
+        cin >> n2;
+    }
+    cout << "Price of third place:";
+    cin >> n3;
+    if(n2<n3)
+    {
+        cout << "Enter correct price of third place:";
+        cin >> n3;
+    }
+    cout << "Price of excursion: ";
+    cin >> cena;
+    if (n3>=cena)
+    {
+        cout << "Everybody can go to the excursion.";
+    }
+    else
+    {
+        if (n2>=cena)
+        {
+            cout << "Students with first and second place can go to the excursion.";
+        }
+        else
+        {
+            if (n1>=cena)
+            {
+                cout << "Student with first place can go to the excursion.";
+            }
+            else
+            {
+                cout << "No one can go to the excursion.";
+            }
+        }
+    }
+return 0;
+}
